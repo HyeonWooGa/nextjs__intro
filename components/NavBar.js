@@ -6,18 +6,33 @@ export default function NavBar() {
   // console.log(router);
   return (
     <nav>
-      <Link href="/">
-        <a className={router.pathname === "/" ? "active" : ""}>Home</a>
-      </Link>
-      <Link href="/about">
-        <a className={router.pathname === "/about" ? "active" : ""}>About</a>
-      </Link>
+      <div>
+        <Link href="/">
+          <a className={router.pathname === "/" ? "active" : ""}>Home</a>
+        </Link>
+        <Link href="/about">
+          <a className={router.pathname === "/about" ? "active" : ""}>About</a>
+        </Link>
+      </div>
       <style jsx>{`
-        a {
-          text-decoration: none;
+        nav {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 20px;
+          padding-bottom: 10px;
+        }
+        nav a {
+          font-weight: 600;
+          font-size: 18px;
         }
         .active {
-          color: yellow;
+          color: tomato;
+        }
+        nav div {
+          display: flex;
+          gap: 10px;
         }
       `}</style>
     </nav>
