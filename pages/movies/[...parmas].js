@@ -6,7 +6,7 @@ export default function Details() {
   // console.log(router);
   return (
     <div>
-      <h4>{title || "Loading..."}</h4>
+      <h4>{title}</h4>
     </div>
   );
 }
